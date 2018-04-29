@@ -20,5 +20,3 @@ Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
-
-let g:neocomplete#enable_ad_startup=1
