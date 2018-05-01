@@ -27,6 +27,8 @@ call vundle#end()
 filetype plugin indent on
 
 "---Sprlit Management---"
+set splitbelow
+set splitright
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-L> <C-W><C-L>
