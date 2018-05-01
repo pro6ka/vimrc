@@ -6,10 +6,13 @@ set smartindent
 set number
 set nocompatible
 set autoindent
-set tags+=~/sites/devilbox/data/www/bx-key/htdocs/tags
+set tags+=./.vim/tags
+set hlsearch
+set incsearch
+
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
@@ -22,3 +25,15 @@ Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on
+
+"---Sprlit Management---"
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
+
+"---Mappings---"
+
+"Add simple highlight removal
+nmap ,<space> :nohlsearch<cr>
+
