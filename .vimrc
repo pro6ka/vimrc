@@ -46,3 +46,6 @@ nmap ,<space> :nohlsearch<cr>
 set wildignore+=/bitrix/*,*.swp,*.zip,*.jpg,*.png,*.swg
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|idea|sublime)$'
 
+"NERDTree
+let NERDTreeHijackNetrw = 0
+
