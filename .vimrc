@@ -1,3 +1,6 @@
+" setup vundle
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set tabstop=4
 set shiftwidth=4
 set smarttab
