@@ -42,3 +42,7 @@ nmap <C-H> <C-W><C-H>
 "Add simple highlight removal
 nmap ,<space> :nohlsearch<cr>
 
+"CtrlP
+set wildignore+=/bitrix/*,*.swp,*.zip,*.jpg,*.png,*.swg
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|idea|sublime)$'
+
