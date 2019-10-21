@@ -1,3 +1,5 @@
+" clone this repository
+" git clone git@github.com:pro6ka/vimrc.git
 " setup vundle
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " run
@@ -16,6 +18,8 @@ set tags+=./.vim/tags
 set hlsearch
 set incsearch
 set backupcopy=yes
+set exrc
+set secure
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
