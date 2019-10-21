@@ -33,6 +33,20 @@ Plugin 'tobyS/pdv'
 Plugin 'napcs/vim-nativescript'
 Plugin 'irrationalistic/vim-tasks'
 Plugin 'vimwiki/vimwiki'
+Plugin 'ncm2/ncm2'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plugin 'ncm2/ncm2-bufword'
+Plugin 'ncm2/ncm2-path'
+Plugin 'ncm2/ncm2-cssomni'
+Plugin 'ncm2/ncm2-tern'
+Plugin 'mhartington/nvim-typescript'
+Plugin 'ncm2/ncm2-jedi'
+Plugin 'ncm2/ncm2-racer'
+Plugin 'ncm2/ncm2-go'
+Plugin 'phpactor/ncm2-phpactor'
 
 call vundle#end()
 filetype plugin indent on
@@ -61,8 +75,17 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd vimenter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+nmap <C-N><C-T> :NERDTreeToggle<CR>
 
 " PHP documenter script bound to Control-P
 autocmd FileType php inoremap <C-d> <ESC>:call PhpDocSingle()<CR>i
 autocmd FileType php nnoremap <C-d> :call PhpDocSingle()<CR>
 autocmd FileType php vnoremap <C-d> :call PhpDocRange()<CR>
+
+" ncm2
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
